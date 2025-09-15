@@ -1,0 +1,53 @@
+/* WINGO v2 styles */
+:root{
+  --green:#00ff66;
+  --red:#ff4d4d;
+  --purple:#b78bff;
+  --muted:#66ffb3;
+  --bg:#000000;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#000; color:var(--green); font-family: 'Courier New', monospace; display:flex; flex-direction:column; align-items:center; min-height:100vh; background-image: radial-gradient(rgba(0,255,0,0.03), transparent 40%);}
+.header{width:100%;max-width:1100px;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;margin-top:18px;background:rgba(0,0,0,0.6);border-radius:10px;border:1px solid rgba(0,255,0,0.06)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:72px;height:72px;border-radius:8px;object-fit:contain;border:1px solid rgba(0,255,0,0.08);background:#031; padding:6px}
+.brand-text .title{font-weight:900;font-size:20px;color:var(--green);letter-spacing:2px}
+.brand-text .subtitle{font-size:12px;color:#88ffb3;opacity:0.9}
+
+.active{font-weight:800;background:linear-gradient(90deg,#033,#022);padding:8px 12px;border-radius:8px;color:var(--green);box-shadow:0 6px 20px rgba(0,255,0,0.05)}
+
+.main{width:100%;max-width:980px;padding:20px}
+.panel{background:rgba(0,0,0,0.6);padding:18px;border-radius:12px;border:1px solid rgba(0,255,0,0.04);box-shadow:0 10px 30px rgba(0,255,0,0.02)}
+.panel h1{margin:0;color:var(--green);font-size:22px}
+.lead{color:#88ffb3;font-size:13px;margin-top:6px}
+
+.form{display:flex;gap:10px;margin-top:14px;align-items:center;justify-content:center}
+.form input{padding:10px 12px;border-radius:8px;border:1px solid rgba(0,255,0,0.06);background:#001100;color:var(--green);width:320px;font-weight:700}
+.btn{padding:10px 16px;border-radius:8px;border:1px solid rgba(0,255,0,0.06);background:#002200;color:var(--green);cursor:pointer;font-weight:900}
+.btn:disabled{background:#003300;color:#446644;cursor:not-allowed}
+
+.result-area{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.result-card{width:360px;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.2));border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;align-items:center;gap:8px}
+.result-label{font-size:12px;color:#88ffb3;font-weight:800}
+.result-size{font-size:18px;font-weight:900;color:var(--green)}
+.result-number{font-size:64px;font-weight:900;letter-spacing:6px;color:var(--green)}
+.result-color{padding:6px 12px;border-radius:999px;font-weight:900;background:#071; color:#001; display:inline-block; margin-top:6px}
+
+.history-card{width:260px;padding:12px;border-radius:10px;background:rgba(0,0,0,0.5);border:1px solid rgba(0,255,0,0.03)}
+.history-title{font-weight:900;color:var(--green);margin-bottom:8px}
+.history-list{max-height:260px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.history-item{padding:8px;border-radius:8px;background:rgba(0,0,0,0.45);border:1px solid rgba(0,255,0,0.02);font-weight:800;color:#bfffbf;font-size:13px}
+
+.users-popup{position:fixed;right:18px;top:92px;background:rgba(0,0,0,0.8);padding:10px 14px;border-radius:8px;border:1px solid rgba(0,255,0,0.06);color:var(--green);box-shadow:0 6px 20px rgba(0,255,0,0.04);transition:transform 0.3s,opacity 0.3s}
+.users-popup.hidden{opacity:0;transform:translateY(-8px);pointer-events:none}
+.users-popup.show{opacity:1;transform:translateY(0)}
+
+.red{color:var(--red); text-shadow:0 0 8px rgba(255,77,77,0.35); font-weight:900}
+.green{color:var(--green); text-shadow:0 0 8px rgba(0,255,102,0.35); font-weight:900}
+.purple{color:var(--purple); text-shadow:0 0 8px rgba(183,139,255,0.35); font-weight:900}
+
+@media (max-width:760px){
+  .result-area{flex-direction:column;align-items:center}
+  .history-card{width:92%}
+  .result-card{width:92%}
+}

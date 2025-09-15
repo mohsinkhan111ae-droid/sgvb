@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>WINGO — VIP Prediction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="assets/logo.jpeg" alt="WINGO Logo" class="logo">
+      <div class="brand-text">
+        <div class="title">WINGO</div>
+        <div class="subtitle">W-I-N-G-O — prediction hack</div>
+      </div>
+    </div>
+    <div class="active" id="activeUsers">Active Users: 10,235</div>
+  </header>
+
+  <main class="main">
+    <section class="panel">
+      <h1>WINGO Prediction Panel</h1>
+      <p class="lead">Enter a <strong>Period Number</strong> and press <strong>Get Prediction</strong>. Shows <strong>BIG</strong> (5–9) or <strong>SMALL</strong> (0–4) and one digit. Cooldown 60s after each prediction.</p>
+
+      <div class="form">
+        <input id="periodInput" placeholder="Enter period number (e.g., 20250915)" />
+        <button id="getBtn" class="btn">Get Prediction</button>
+      </div>
+
+      <div class="result-area">
+        <div class="result-card" id="resultCard">
+          <div class="result-label">RESULT</div>
+          <div class="result-size" id="resultSize">—</div>
+          <div class="result-number" id="resultNumber">—</div>
+          <div class="result-color" id="resultColor">----</div>
+        </div>
+
+        <div class="history-card">
+          <div class="history-title">History</div>
+          <div id="historyList" class="history-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- floating popup for active users updates -->
+  <div id="usersPopup" class="users-popup hidden"></div>
+
+  <audio id="popSound" src="assets/pop.wav" preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
